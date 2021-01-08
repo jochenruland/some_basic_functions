@@ -34,15 +34,27 @@ def create_dict(n):
         to the program: 8 Then, the output should be: {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}'''
     tmp_dict = dict()
 
-    for i in range(1,n+1):
+    for i in range(1, n+1):
         tmp_dict[i]=i*i
         i+=1
 
     return tmp_dict
 
+def create_list_tuple(s):
+    ''' The function accepts a sequence of comma-separated numbers from console
+        and generate a list and a tuple which contains every number.
+        Suppose the following input is supplied to the program: 34,67,55,33,12,98
+        Then, the output should be: ['34', '67', '55', '33', '12', '98'] ('34', '67', '55', '33', '12', '98')
+        With tuple() method can convert list to tuple '''
+    tmp_list = s.split(',')
+    t=tuple(tmp_list)
+    return tmp_list, t
+
 
 # calcuate_7_5()
 #x=int(input('Integer to calculate factorial:'))
 #print(fact(x))
-n = int(input('Integer to create dict:'))
-print(create_dict(n))
+#n = int(input('Integer to create dict:'))
+#print(create_dict(n))
+s = input('Enter comma separated numbers:')
+print(create_list_tuple(s))
