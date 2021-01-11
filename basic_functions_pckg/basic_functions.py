@@ -42,7 +42,7 @@ def create_dict(n):
 
 def create_list_tuple(s):
     ''' The function accepts a sequence of comma-separated numbers from console
-        and generate a list and a tuple which contains every number.
+        and generates a list and a tuple which contains every number.
         Suppose the following input is supplied to the program: 34,67,55,33,12,98
         Then, the output should be: ['34', '67', '55', '33', '12', '98'] ('34', '67', '55', '33', '12', '98')
         With tuple() method can convert list to tuple '''
@@ -50,11 +50,31 @@ def create_list_tuple(s):
     t=tuple(tmp_list)
     return tmp_list, t
 
+class Additionalstringmethods:
+    ''' Define a class which has at least two methods
+        Also please include simple test function to test the class methods.'''
+    def __init__(self, i_str=''):
+        self.input_str = i_str
+
+    def getString(self):
+        ''' getString: to get a string from console input'''
+        self.input_str = input('write whatever you like:')
+
+
+    def printString(self):
+        ''' printString: to print the string in upper case '''
+        new_string = self.input_str.upper()
+        print(new_string)
+
 
 # calcuate_7_5()
 #x=int(input('Integer to calculate factorial:'))
 #print(fact(x))
 #n = int(input('Integer to create dict:'))
 #print(create_dict(n))
-s = input('Enter comma separated numbers:')
-print(create_list_tuple(s))
+#s = input('Enter comma separated numbers:')
+#print(create_list_tuple(s))
+
+string_obj = Additionalstringmethods('test')
+string_obj.getString()
+string_obj.printString()
