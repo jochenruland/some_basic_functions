@@ -98,15 +98,15 @@ def squareroot_2_50_s_30(s):
         Hints: If the output received is in decimal form, it should be rounded off to its nearest value
         (for example, if the output received is 26.0, it should be printed as 26)
         In case of input data being supplied to the question, it should be assumed to be a console input. '''
-    input_list = s.split(',')
+
+    input_list = s
     output_list = []
 
-    for i in range(len(input_list)):
-        calc = round(math.sqrt(2 * 50 * int(input_list[i])/30))
-        output_list.append(calc)
-        i=i+1
+    for i in input_list:
+        calc = round(math.sqrt(2 * 50 * float(i)/30))
+        output_list.append(str(calc))
 
-    return print(output_list)
+    return print(','.join(output_list))
 
-s = input('Enter comma separated integer values: ')
+s = [x for x in input('comma separated integer').split(',')]
 squareroot_2_50_s_30(s)
