@@ -1,3 +1,5 @@
+import math
+
 def calcuate_7_5():
     """ Calculates all such numbers which are divisible by 7 but are not a multiple of 5,
         between lowervalue and uppervalue (both included). The numbers obtained will be printed
@@ -75,16 +77,36 @@ class Additionalstringmethods:
 #s = input('Enter comma separated numbers:')
 #print(create_list_tuple(s))
 
-string_obj = Additionalstringmethods('test')
-string_obj.getString()
-string_obj.printString()
+#string_obj = Additionalstringmethods('test')
+#string_obj.getString()
+#string_obj.printString()
 
 
 
-def test_Additionalstringmethods():
-    t_object = Additionalstringmethods('bullshit')
-    assert(t_object.printString()==print('BULLSHITt'))
+#def test_Additionalstringmethods():
+#    t_object = Additionalstringmethods('bullshit')
+#    assert(t_object.printString()==print('BULLSHITt'))
 
-test_Additionalstringmethods()
+#test_Additionalstringmethods()
 
- 
+def squareroot_2_50_s_30(s):
+    ''' A program that calculates and prints the value according to the given formula:
+        Q = Square root of [(2 * C * D)/H] Following are the fixed values of C and H: C is 50. H is 30.
+        D is the variable whose values should be input to your program in a comma-separated sequence.
+        Example Let us assume the following comma separated input sequence is given to the program: 100,150,180
+        The output of the program should be: 18,22,24
+        Hints: If the output received is in decimal form, it should be rounded off to its nearest value
+        (for example, if the output received is 26.0, it should be printed as 26)
+        In case of input data being supplied to the question, it should be assumed to be a console input. '''
+    input_list = s.split(',')
+    output_list = []
+
+    for i in range(len(input_list)):
+        calc = round(math.sqrt(2 * 50 * int(input_list[i])/30))
+        output_list.append(calc)
+        i=i+1
+
+    return print(output_list)
+
+s = input('Enter comma separated integer values: ')
+squareroot_2_50_s_30(s)
