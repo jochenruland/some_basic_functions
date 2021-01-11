@@ -1,4 +1,5 @@
 import math
+import numpy as np
 
 def calcuate_7_5():
     """ Calculates all such numbers which are divisible by 7 but are not a multiple of 5,
@@ -108,5 +109,28 @@ def squareroot_2_50_s_30(s):
 
     return print(','.join(output_list))
 
-s = [x for x in input('comma separated integer').split(',')]
-squareroot_2_50_s_30(s)
+#s = [x for x in input('comma separated integer').split(',')]
+#squareroot_2_50_s_30(s)
+
+def create_2_dim_array(dims):
+    ''' A program which takes 2 digits, X,Y as input and generates a 2-dimensional array.
+        The element value in the i-th row and j-th column of the array should be i*j.
+        Note: i=0,1.., X-1; j=0,1,¡­Y-1. Example Suppose the following inputs are given to the program: 3,5
+        Then, the output of the program should be: [[0, 0, 0, 0, 0], [0, 1, 2, 3, 4], [0, 2, 4, 6, 8]]
+        Note: In case of input data being supplied to the question, it should be assumed to be a console input in a comma-separated form '''
+
+    rowNum=int(dims[0])
+    colNum=int(dims[1])
+
+    list_transform = [[0 for col in range(colNum)] for row in range(rowNum)]
+
+    for i in range(rowNum):
+        for j in range(colNum):
+            list_transform[i][j]=i*j
+            j+=1
+        i+=1
+
+    return print(list_transform)
+
+a_dims = tuple(input('Enter 2 dimensions separated by comma: ').split(','))
+create_2_dim_array(a_dims)
