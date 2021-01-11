@@ -78,3 +78,13 @@ class Additionalstringmethods:
 string_obj = Additionalstringmethods('test')
 string_obj.getString()
 string_obj.printString()
+
+
+
+def test_Additionalstringmethods():
+    t_object = Additionalstringmethods('bullshit')
+    assert(t_object.printString()==print('BULLSHITt'))
+
+test_Additionalstringmethods()
+
+ 
