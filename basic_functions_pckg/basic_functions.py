@@ -143,5 +143,22 @@ def sort_word_list(s):
     sorted_list = sorted(s)
     return print(','.join(sorted_list))
 
-input_list = [x.upper() for x in input('Enter comma separated words: ').split(',')]
-sort_word_list(input_list)
+# input_list = [x.upper() for x in input('Enter comma separated words: ').split(',')]
+# sort_word_list(input_list)
+
+def capitalized_char():
+    ''' A program that accepts sequence of lines as input and prints the lines
+        after making all characters in the sentence capitalized.
+        Suppose the following input is supplied to the program: Hello world Practice makes perfect
+        Then, the output should be: HELLO WORLD PRACTICE MAKES PERFECT '''
+    input_list = []
+    while True:
+        s = input()
+        if s:
+            input_list.append(s.upper())
+        else:
+            break
+    #return [print(sentence) for sentence in input_list]
+    return print(' '.join(input_list))
+
+#capitalized_char()
