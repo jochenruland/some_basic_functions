@@ -132,5 +132,16 @@ def create_2_dim_array(dims):
 
     return print(list_transform)
 
-a_dims = tuple(input('Enter 2 dimensions separated by comma: ').split(','))
-create_2_dim_array(a_dims)
+# a_dims = [int(x) for x in (input('Enter 2 dimensions separated by comma: ').split(','))] # Transforms string into integer directly after input
+# create_2_dim_array(a_dims)
+
+def sort_word_list(s):
+    ''' A program that accepts a comma separated sequence of words as input
+        and prints the words in a comma-separated sequence after sorting them alphabetically.
+        Suppose the following input is supplied to the program: without,hello,bag,world
+        Then, the output should be: bag,hello,without,world '''
+    sorted_list = sorted(s)
+    return print(','.join(sorted_list))
+
+input_list = [x.upper() for x in input('Enter comma separated words: ').split(',')]
+sort_word_list(input_list)
