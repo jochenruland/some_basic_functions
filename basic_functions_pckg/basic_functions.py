@@ -162,3 +162,32 @@ def capitalized_char():
     return print(' '.join(input_list))
 
 #capitalized_char()
+
+def remove_duplicates():
+    ''' A program that accepts a sequence of whitespace separated words as input and prints the words
+        after removing all duplicate words and sorting them alphanumerically. Suppose the following
+        input is supplied to the program: hello world and practice makes perfect and hello world again
+        Then, the output should be: again and hello makes perfect practice world
+        We use set container to remove duplicated data automatically and then use sorted() to sort the data.'''
+    input_list = []
+
+    while True:
+        s = input('write whatever you want in mulitple lines: ')
+        if s:
+            input_list.append(s.split(' '))
+        else:
+            break
+
+    output_list = []
+    for i in range(len(input_list)):
+        for j in range(len(input_list[i])):
+            output_list.append(input_list[i][j])
+            j+=1
+        i+=1
+
+    #return print(output_list)
+    output_list = sorted(set(output_list))
+
+    return print(' '.join(output_list))
+
+remove_duplicates()
