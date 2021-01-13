@@ -208,4 +208,23 @@ def four_digit_div_5():
 
     return print(','.join(output_list))
 
-four_digit_div_5()
+#four_digit_div_5()
+
+def find_no_digits_even(lowervalue, uppervalue):
+    ''' A program, which will find all such numbers between 1000 and 3000 (both included)
+        such that each digit of the number is an even number.
+        The numbers obtained should be printed in a comma-separated sequence on a single line '''
+    output_list = []
+    for i in range(lowervalue, uppervalue+1):
+        s = str(i)
+        for j in range(len(s)):
+            if int(s[j])%2==0:
+                j+=1
+            else:
+                break
+        if j == len(s):
+            output_list.append(s)
+
+    return print(','.join(output_list))
+
+#find_no_digits_even(4000,5000)
