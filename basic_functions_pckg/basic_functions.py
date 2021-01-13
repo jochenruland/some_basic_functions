@@ -228,3 +228,22 @@ def find_no_digits_even(lowervalue, uppervalue):
     return print(','.join(output_list))
 
 #find_no_digits_even(4000,5000)
+
+def calculate_no_letters_digits(s):
+    ''' A program that accepts a sentence and calculate the number of letters and digits.
+        Suppose the following input is supplied to the program: hello world! 123
+        Then, the output should be: LETTERS 10 DIGITS 3 '''
+    dict = {'LETTERS': 0, 'DIGITS' : 0}
+
+    for c in s:
+        if c.isalpha():
+            dict['LETTERS'] += 1
+        elif c.isdigit():
+            dict['DIGITS'] += 1
+        else:
+            pass
+
+    return print(dict)
+
+input_str = input()
+calculate_no_letters_digits(input_str)
