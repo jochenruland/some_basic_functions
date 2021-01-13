@@ -185,9 +185,27 @@ def remove_duplicates():
             j+=1
         i+=1
 
-    #return print(output_list)
     output_list = sorted(set(output_list))
 
     return print(' '.join(output_list))
 
-remove_duplicates()
+#remove_duplicates()
+
+def four_digit_div_5():
+    ''' A program which accepts a sequence of comma separated 4 digit binary numbers
+        as its input and then check whether they are divisible by 5 or not.
+        The numbers that are divisible by 5 are to be printed in a comma separated sequence.
+        Example: 0100,0011,1010,1001 Then the output should be: 1010
+        Notes: Assume the data is input by console. '''
+    input_list = []
+    for x in input('comma separated 4 digtit binary numbers: ').split(','):
+        input_list = int(x, 2)
+
+    output_list = []
+    for value in input_list:
+        if not value%5:
+            output_list.append(str(value))
+
+    return print(','.join(output_list))
+
+four_digit_div_5()
