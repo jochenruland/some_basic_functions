@@ -245,5 +245,5 @@ def calculate_no_letters_digits(s):
 
     return print(dict)
 
-input_str = input()
+input_str = input('Write a sentence with letters and digits: ')
 calculate_no_letters_digits(input_str)
