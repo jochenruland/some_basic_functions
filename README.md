@@ -9,8 +9,8 @@ my Python capabilities. The coding tasks were found under
 https://github.com/zhiwehu/Python-programming-exercises
 
 ## Installation
-Clone this repo to the preferred directory on your computer using `git clone placeholder`.
-You can find the Python code in the `basic_functions.py` file in `basic_functions_pckg`
+Clone this repo to the preferred directory on your computer using `git clone https://github.com/jochenruland/some_basic_functions`.
+You can find the Python code in the `basic_functions.py` file in the `basic_functions_pckg`
 directory.
 
 You must have installed the following libraries to run the code:
